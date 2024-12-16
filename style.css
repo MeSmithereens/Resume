@@ -1,0 +1,293 @@
+/* Default background image for light mode */
+html {
+    background-image: url("https://codehs.com/uploads/d879f800ffe85090486ab36085f70a23");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    font-family: Courier;
+    transition: filter 0.3s ease, color 0.3s ease;
+}
+
+/* Body and content styles */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#AboutMe {
+    display: none; /* Hide AboutMe by default */
+    opacity: 1;
+    position: relative;
+    bottom: 50%;
+    width: 60%;
+    max-width: 600px;
+    margin: 40px;
+    padding: 20px;
+    background-color: #ffffff; /* Changed from rgba(255, 255, 255, 0.8) */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+
+#HideAbout {
+    position:relative;
+    background-color: #a8b3a1; /* Matches the background color from the masthead */
+    color: #333; /* Dark text for contrast */
+    font-family: Courier, sans-serif; /* Matches the font-family used in the webpage */
+    padding: 10px 20px; /* Adds some padding for better size */
+    border: none; /* Removes the default border */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Makes it clear the button is clickable */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for depth */
+    transition: background-color 0.3s, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover state: changes background color */
+#HideAbout:hover {
+    color:#ffffff;
+    background-color: #304b39; /* Light blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the button when hovered */
+}
+
+/* Active state: button gets darker when clicked */
+#HideAbout:active {
+    color:#333;
+    background-color: #d0c6b5; /* Darker shade when clicked */
+    transform: scale(1); /* Button returns to normal size */
+}
+
+#me {
+    height:350px;
+    width:350px;
+    border-radius: 50%; /* This will round the image */
+    object-fit: cover;
+}
+
+/* Masthead styles (not affected by dark mode) */
+#masthead {
+    background-color: #f4e7d7;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* Content section styles */
+.info-content {
+    position: absolute;
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#WhatIveDone {
+    top: 170px;
+    left: 20px;
+}
+
+#AwardsAchievements {
+    right: 20px;
+    top: 170px; /* Original position from your initial code */
+}
+
+#Skills {
+    bottom: 170px;
+    left: 20px;
+}
+
+/* References Section */
+#ReferencesCover {
+    position: absolute;
+    bottom: 170px; /* Positioned directly below #AwardsAchievements */
+    right: 20px; /* Aligning it to the center-right */
+    width: 60%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#References {
+    position: absolute;
+    bottom: 170px; /* Positioned just below #ReferencesCover */
+    right: 20px; /* Aligning it to the center-right */
+    width: 60%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode #HideAbout{
+    background-color:#a6abc8;
+    color:#333;
+}
+
+.dark-mode #HideAbout:hover{
+    background-color:#4c4071;
+    color:#ffffff;
+}
+
+.dark-mode #HideAbout:active{
+    background-color:#d5eff0;
+    color:#333;
+}
+
+.dark-mode #AboutMe {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Dark mode styles for References */
+.dark-mode #References {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #e0e0e0;
+}
+
+.dark-mode #ReferencesCover {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Dark Mode toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Dark mode styles for the entire body */
+.dark-mode {
+    color: #e0e0e0;
+}
+
+.dark-mode #masthead{
+    color: black;
+    background-color: #d5eff0;
+}
+
+/* Dark mode background image */
+html.dark-mode {
+    background-image: url("https://codehs.com/uploads/e1572e0d0f5c52ca4d3ec46237ae7942");
+
+}
+
+/* Dark Mode Styles for #WhatIveDone */
+.dark-mode #WhatIveDone {
+    background-color: rgba(50, 50, 50, 0.8); /* Dark background for content */
+    color: #e0e0e0;
+}
+
+/* Dark Mode Styles for #WhatIveDoneCover */
+.dark-mode #WhatIveDoneCover {
+    background-color: #333; /* Dark background for the cover */
+    color: #e0e0e0;
+}
+
+/* Dark Mode Styles for #AwardsAchievements */
+.dark-mode #AwardsAchievements {
+    background-color: rgba(50, 50, 50, 0.8); /* Dark background for content */
+    color: #e0e0e0;
+}
+
+/* Dark Mode Styles for #AwardsAchievementsCover */
+.dark-mode #AwardsAchievementsCover {
+    background-color: #333; /* Dark background for the cover */
+    color: #e0e0e0;
+}
+
+/* Dark Mode Styles for #Skills */
+.dark-mode #Skills {
+    background-color: rgba(50, 50, 50, 0.8); /* Dark background for content */
+    color: #e0e0e0;
+}
+
+/* Dark Mode Styles for #SkillsCover */
+.dark-mode #SkillsCover {
+    background-color: #333; /* Dark background for the cover */
+    color: #e0e0e0;
+}
+
+/* Header and section styles */
+ul {
+    padding-left: 20px;
+    margin-left: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#gettoknowme {
+    font-size: 30px;
+}
+
+/* Make the WhatIveDoneCover, AwardsAchievementsCover, and SkillsCover divs clickable */
+#WhatIveDoneCover {
+    top: 170px;
+    left: 20px;
+    position: absolute;
+    width: 60%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#AwardsAchievementsCover {
+    right: 20px;
+    top: 170px;
+    position: absolute;
+    width: 60%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#SkillsCover {
+    bottom: 170px;
+    left: 20px;
+    position: absolute;
+    width: 60%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode #me{
+        background-color: #d5eff0;
+}
